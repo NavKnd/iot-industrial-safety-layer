@@ -12,9 +12,12 @@ st.title(" IoT Industrial Safety Dashboard")
 st.caption("Live monitoring and analytics for industrial safety alerts")
 
 # ---------------- API URLS ----------------
-ACTIVE_API = "http://127.0.0.1:8000/alerts"
-HISTORY_API = "http://127.0.0.1:8000/alerts/history"
-SENSOR_API = "http://127.0.0.1:8000/all-data"
+BASE_API = "https://iot-industrial-safety-layer.onrender.com"
+
+ACTIVE_API = f"{BASE_API}/alerts"
+HISTORY_API = f"{BASE_API}/alerts/history"
+SENSOR_API = f"{BASE_API}/all-data"
+
 
 # ---------------- FETCH FUNCTION ----------------
 def fetch_data(url):

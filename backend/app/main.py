@@ -3,6 +3,8 @@ from pydantic import BaseModel, Field
 from datetime import datetime
 from collections import defaultdict, deque
 import statistics
+import os
+
 
 from backend.db.database import (
     metadata,
@@ -23,8 +25,9 @@ metadata.create_all(bind=engine)
 app = FastAPI(
     title="IoT-Ready Industrial Safety Layer",
     description="Backend API for sensor data ingestion, validation, and alerts.",
-    version="0.1.0",
+    version="1.0.0",
 )
+
 
 
 # ------------------ HEALTH CHECK ------------------
